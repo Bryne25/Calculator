@@ -42,32 +42,35 @@
                           <Component id="dot" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="num_2" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_5" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_8" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_0" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="num_2" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="num_5" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="num_8" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="num_6" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="num_9" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="num_3" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="num_0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="num_6" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_9" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="delete" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="multiply" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="add" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="ans" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="clear" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="divide" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="sub" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                           <Component id="equal" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="num_10" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_13" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_14" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_16" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="num_11" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_12" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="num_15" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="equal1" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -93,40 +96,42 @@
                       <Component id="dot" min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="num_2" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="delete" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_5" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="multiply" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_8" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="add" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="ans" min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="num_3" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="clear" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_6" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="divide" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_9" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="sub" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="equal" min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="num_10" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="num_2" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="num_5" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="num_8" min="-2" pref="58" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="num_3" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="num_6" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="num_9" min="-2" pref="58" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_13" min="-2" pref="58" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_14" min="-2" pref="58" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_16" min="-2" pref="58" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="num_11" min="-2" pref="58" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_12" min="-2" pref="58" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="num_15" min="-2" pref="58" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="equal1" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="num_0" min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -237,14 +242,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_0ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="equal">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="="/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="equalActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="dot">
       <Properties>
         <Property name="text" type="java.lang.String" value="."/>
@@ -253,15 +250,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dotActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_10">
+    <Component class="javax.swing.JButton" name="delete">
       <Properties>
         <Property name="text" type="java.lang.String" value="DEL"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_10ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_11">
+    <Component class="javax.swing.JButton" name="clear">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -269,18 +266,18 @@
         <Property name="text" type="java.lang.String" value="AC"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_11ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_12">
+    <Component class="javax.swing.JButton" name="divide">
       <Properties>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_12ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="divideActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_13">
+    <Component class="javax.swing.JButton" name="multiply">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -288,39 +285,39 @@
         <Property name="text" type="java.lang.String" value="*"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_13ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="multiplyActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_14">
+    <Component class="javax.swing.JButton" name="add">
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_14ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_15">
+    <Component class="javax.swing.JButton" name="sub">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_15ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="equal1">
+    <Component class="javax.swing.JButton" name="equal">
       <Properties>
         <Property name="text" type="java.lang.String" value="="/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="equal1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="equalActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num_16">
+    <Component class="javax.swing.JButton" name="ans">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ans"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_16ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ansActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
