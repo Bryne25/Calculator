@@ -18,6 +18,11 @@ public class calc extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void add_char(char i){
+        String temp = input_field.getText();
+        temp += i;
+        input_field.setText(temp);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,15 +60,12 @@ public class calc extends javax.swing.JFrame {
         setName("mainFrame"); // NOI18N
         setResizable(false);
 
+        input_field.setEditable(false);
         input_field.setFont(new java.awt.Font("Rod", 0, 24)); // NOI18N
+        input_field.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         input_field.setAutoscrolls(false);
         input_field.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         input_field.setName("input_field"); // NOI18N
-        input_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                input_fieldActionPerformed(evt);
-            }
-        });
 
         num_1.setText("1");
         num_1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -296,61 +298,77 @@ public class calc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void input_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_input_fieldActionPerformed
-
     private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
         // TODO add your handlg code here:
-        
+        add_char('1');
     }//GEN-LAST:event_num_1ActionPerformed
 
     private void num_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_4ActionPerformed
         // TODO add your handling code here:
+        add_char('4');
     }//GEN-LAST:event_num_4ActionPerformed
 
     private void num_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_7ActionPerformed
         // TODO add your handling code here:
+        add_char('7');
     }//GEN-LAST:event_num_7ActionPerformed
 
     private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
         // TODO add your handling code here:
+        add_char('2');
     }//GEN-LAST:event_num_2ActionPerformed
 
     private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
         // TODO add your handling code here:
+        add_char('5');
     }//GEN-LAST:event_num_5ActionPerformed
 
     private void num_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_8ActionPerformed
         // TODO add your handling code here:
+        add_char('8');
     }//GEN-LAST:event_num_8ActionPerformed
 
     private void num_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_6ActionPerformed
         // TODO add your handling code here:
+        add_char('6');
     }//GEN-LAST:event_num_6ActionPerformed
 
     private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
         // TODO add your handling code here:
+        add_char('9');
     }//GEN-LAST:event_num_9ActionPerformed
 
     private void num_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_3ActionPerformed
         // TODO add your handling code here:
+        add_char('3');
     }//GEN-LAST:event_num_3ActionPerformed
 
     private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
         // TODO add your handling code here:
+        add_char('0');
     }//GEN-LAST:event_num_0ActionPerformed
 
     private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
         // TODO add your handling code here:
+        String temp = input_field.getText();
+        if(!temp.contains(".")){
+            add_char('.');
+        }
     }//GEN-LAST:event_dotActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        String temp = input_field.getText();
+        if(!temp.isEmpty()){
+            temp = temp.substring(0, temp.length()-1);
+            input_field.setText(temp);
+        }
+        
     }//GEN-LAST:event_deleteActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
+        input_field.setText("");
     }//GEN-LAST:event_clearActionPerformed
 
     private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
