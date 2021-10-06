@@ -57,26 +57,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="num_7" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="num_8" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="num_9" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="clear" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delete" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ceiling" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="floor" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="modulo" min="-2" pref="67" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="dot" min="-2" pref="67" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -137,6 +120,32 @@
                               </Group>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="num_7" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="num_8" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="num_9" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="clear" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="delete" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="ceiling" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="alabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="floor" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="blabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="modulo" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="clabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -144,8 +153,9 @@
                       <Component id="buttonC" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
                       <Component id="buttonB" min="-2" pref="67" max="-2" attributes="0"/>
                       <Component id="buttonD" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="dlabel" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -159,7 +169,14 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="alabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="blabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="clabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="num_7" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                       <Component id="num_8" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
@@ -171,7 +188,7 @@
                       <Component id="modulo" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                       <Component id="buttonA" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -202,7 +219,7 @@
                               <Component id="jButton13" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                               <Component id="sub" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="10" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="dot" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                               <Component id="num_0" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
@@ -215,18 +232,15 @@
                               <Component id="buttonD" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="buttonC" min="-2" pref="68" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="buttonC" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="input_field" min="-2" pref="92" max="-2" attributes="0"/>
-                      <EmptySpace pref="307" max="32767" attributes="0"/>
+                      <EmptySpace pref="308" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -609,6 +623,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doubleSumActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ceiling">
           <Properties>
@@ -708,6 +725,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="floor">
           <Properties>
@@ -861,6 +881,26 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="alabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="A="/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="blabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="B="/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="clabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C="/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dlabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="D="/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -1,19 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package calculator;
 
-/**
- *
- * @author Mark
- */
 public class calc extends javax.swing.JFrame {
 
-    /**
-     * Creates new form calc
-     */
     public calc() {
         initComponents();
     }
@@ -21,7 +10,7 @@ public class calc extends javax.swing.JFrame {
     //double resultPermu = 0;
     public String Operation;
     String Answer;
-
+    double answer=0,a=0,b=0,c=0,d=0;
     
     public static double ceiling(String temp){
        double ceil = Double.parseDouble(temp);
@@ -86,6 +75,10 @@ public class calc extends javax.swing.JFrame {
         log = new javax.swing.JButton();
         buttonC = new javax.swing.JButton();
         buttonB = new javax.swing.JButton();
+        alabel = new javax.swing.JLabel();
+        blabel = new javax.swing.JLabel();
+        clabel = new javax.swing.JLabel();
+        dlabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -318,6 +311,11 @@ public class calc extends javax.swing.JFrame {
         doubleSum.setForeground(new java.awt.Color(255, 255, 255));
         doubleSum.setText("∑∑");
         doubleSum.setBorder(null);
+        doubleSum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doubleSumActionPerformed(evt);
+            }
+        });
 
         ceiling.setBackground(new java.awt.Color(51, 51, 51));
         ceiling.setForeground(new java.awt.Color(255, 255, 255));
@@ -373,6 +371,11 @@ public class calc extends javax.swing.JFrame {
         sum.setForeground(new java.awt.Color(255, 255, 255));
         sum.setText("∑");
         sum.setBorder(null);
+        sum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumActionPerformed(evt);
+            }
+        });
 
         floor.setBackground(new java.awt.Color(51, 51, 51));
         floor.setForeground(new java.awt.Color(255, 255, 255));
@@ -464,29 +467,21 @@ public class calc extends javax.swing.JFrame {
             }
         });
 
+        alabel.setText("A=");
+
+        blabel.setText("B=");
+
+        clabel.setText("C=");
+
+        dlabel.setText("D=");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(num_7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(num_8, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(num_9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ceiling, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(floor, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(modulo, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(dot, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -538,14 +533,37 @@ public class calc extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(num_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(num_8, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(num_9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ceiling, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(alabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(floor, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(blabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modulo, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clabel))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dlabel))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -555,7 +573,13 @@ public class calc extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(alabel)
+                    .addComponent(blabel)
+                    .addComponent(clabel)
+                    .addComponent(dlabel))
+                .addGap(79, 79, 79)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(num_7, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(num_8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -566,7 +590,7 @@ public class calc extends javax.swing.JFrame {
                     .addComponent(floor, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(modulo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -592,7 +616,7 @@ public class calc extends javax.swing.JFrame {
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(dot, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(num_0, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -603,15 +627,13 @@ public class calc extends javax.swing.JFrame {
                             .addComponent(combination, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(squareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(input_field, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(307, Short.MAX_VALUE)))
+                    .addContainerGap(308, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -700,6 +722,7 @@ public class calc extends javax.swing.JFrame {
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
         input_field.setText("");
+        answer =0; a=0; b=0; c=0; d=0;
     }//GEN-LAST:event_clearActionPerformed
 
     private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
@@ -868,13 +891,14 @@ public class calc extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialActionPerformed
 
     private void buttonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAActionPerformed
-        String temp = input_field.getText();
-        if(!temp.contains("A")){
-            add_char(' ');
-            add_char('A');
-            add_char(' ');
-            add_char('=');
-            add_char(' ');
+        
+        try{
+            String temp = input_field.getText();
+            a = Double.parseDouble(temp);
+            alabel.setText("A= " + String.valueOf(a));
+            input_field.setText("");
+        }catch(Exception e){
+            input_field.setText("Error");
         }
     }//GEN-LAST:event_buttonAActionPerformed
 
@@ -923,41 +947,80 @@ public class calc extends javax.swing.JFrame {
     }//GEN-LAST:event_floorActionPerformed
 
     private void buttonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDActionPerformed
-        String temp = input_field.getText();
-        if(!temp.contains("D")){
-            add_char(' ');
-            add_char('D');
-            add_char(' ');
-            add_char('=');
-            add_char(' ');
+        try{
+            String temp = input_field.getText();
+            d = Double.parseDouble(temp);
+            dlabel.setText("D= " + String.valueOf(d));
+            input_field.setText("");
+        }catch(Exception e){
+            input_field.setText("Error");
         }
     }//GEN-LAST:event_buttonDActionPerformed
 
     private void logActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logActionPerformed
-        // TODO add your handling code here:
+        try{
+            String temp = input_field.getText();
+            double t = Double.parseDouble(temp);
+            t = Math.log(t);
+            input_field.setText(String.valueOf(t));
+        }catch(Exception e){
+            input_field.setText("Error");
+        }
     }//GEN-LAST:event_logActionPerformed
 
     private void buttonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCActionPerformed
-        String temp = input_field.getText();
-        if(!temp.contains("C")){
-            add_char(' ');
-            add_char('C');
-            add_char(' ');
-            add_char('=');
-            add_char(' ');
+        try{
+            String temp = input_field.getText();
+            c = Double.parseDouble(temp);
+            clabel.setText("C= " + String.valueOf(c));
+            input_field.setText("");
+        }catch(Exception e){
+            input_field.setText("Error");
         }
     }//GEN-LAST:event_buttonCActionPerformed
 
     private void buttonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBActionPerformed
-         String temp = input_field.getText();
-        if(!temp.contains("B")){
-            add_char(' ');
-            add_char('B');
-            add_char(' ');
-            add_char('=');
-            add_char(' ');
+        try{
+            String temp = input_field.getText();
+            b = Double.parseDouble(temp);
+            blabel.setText("B= " + String.valueOf(b));
+            input_field.setText("");
+        }catch(Exception e){
+            input_field.setText("Error");
         }
+        
     }//GEN-LAST:event_buttonBActionPerformed
+
+    private void doubleSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleSumActionPerformed
+        try {
+            double x = Double.parseDouble(input_field.getText());
+            for (double i = a; i <= b; i++) {
+                for (double j = c; j <= d; j++){
+                    answer = answer + (x * i * j);
+                }
+                    
+            }
+            input_field.setText(String.valueOf(answer));
+        } catch (Exception e1) {
+            input_field.setText("Error");
+
+        }
+    }//GEN-LAST:event_doubleSumActionPerformed
+
+    private void sumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumActionPerformed
+        try {
+            while (a <= b) 
+                    {
+                answer = answer + a;
+                a++;
+            }
+            input_field.setText(String.valueOf(answer));
+            a = 0;
+            b = 0;
+        } catch (Exception e1) {
+            input_field.setText(null);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_sumActionPerformed
 
     /**
      * @param args the command line arguments
@@ -996,16 +1059,20 @@ public class calc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
+    private javax.swing.JLabel alabel;
+    private javax.swing.JLabel blabel;
     private javax.swing.JButton buttonA;
     private javax.swing.JButton buttonB;
     private javax.swing.JButton buttonC;
     private javax.swing.JButton buttonD;
     private javax.swing.JButton ceiling;
+    private javax.swing.JLabel clabel;
     private javax.swing.JButton clear;
     private javax.swing.JButton combination;
     private javax.swing.JButton cubeRoot;
     private javax.swing.JButton delete;
     private javax.swing.JButton divide;
+    private javax.swing.JLabel dlabel;
     private javax.swing.JButton dot;
     private javax.swing.JButton doubleSum;
     private javax.swing.JButton equal;
