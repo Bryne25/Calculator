@@ -1642,7 +1642,7 @@ public class calc extends javax.swing.JFrame {
         try{
             String temp = input_field.getText();
             double t = Double.parseDouble(temp);
-            t = Math.log(t);
+            t = Math.log10(t);
             input_field.setText(String.valueOf(t));
         }catch(Exception e){
             input_field.setText("Error");
