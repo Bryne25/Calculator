@@ -186,7 +186,7 @@ public class calc extends javax.swing.JFrame {
    //double resultPermu = 0;
     public String Operation;
     String Answer;
-    public long a = 0,b = 0,c = 0,d = 0, ProducNotAns = 1;
+    public double a = 0,b = 0,c = 0,d = 0, ProducNotAns = 1;
     public double answer = 0;
     
     
@@ -304,6 +304,9 @@ public class calc extends javax.swing.JFrame {
         dlabel = new javax.swing.JLabel();
         CloseParenthesis = new javax.swing.JButton();
         OpenParenthesis = new javax.swing.JButton();
+        Y = new javax.swing.JButton();
+        X = new javax.swing.JButton();
+        round = new javax.swing.JButton();
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setDoubleBuffered(false);
@@ -957,7 +960,6 @@ public class calc extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setDoubleBuffered(false);
 
-        input_field.setEditable(false);
         input_field.setFont(new java.awt.Font("Rod", 0, 48)); // NOI18N
         input_field.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         input_field.setAutoscrolls(false);
@@ -1399,6 +1401,39 @@ public class calc extends javax.swing.JFrame {
             }
         });
 
+        Y.setBackground(new java.awt.Color(51, 51, 51));
+        Y.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Y.setForeground(new java.awt.Color(255, 255, 255));
+        Y.setText("Y");
+        Y.setBorder(null);
+        Y.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YActionPerformed(evt);
+            }
+        });
+
+        X.setBackground(new java.awt.Color(51, 51, 51));
+        X.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        X.setForeground(new java.awt.Color(255, 255, 255));
+        X.setText("X");
+        X.setBorder(null);
+        X.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XActionPerformed(evt);
+            }
+        });
+
+        round.setBackground(new java.awt.Color(51, 51, 51));
+        round.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        round.setForeground(new java.awt.Color(255, 255, 255));
+        round.setText("INT");
+        round.setBorder(null);
+        round.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1478,33 +1513,44 @@ public class calc extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(modulo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(log, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(combination, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(combination, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(log, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(round, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(X, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Y, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(0, 1, Short.MAX_VALUE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(OpenParenthesis, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(OpenParenthesis, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CloseParenthesis, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(CloseParenthesis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(dlabel)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(input_field, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(input_field, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1573,36 +1619,40 @@ public class calc extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(modulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(log, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(X, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Y, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(combination, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                            .addComponent(round, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(170, 170, 170))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(input_field, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(416, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1619,7 +1669,7 @@ public class calc extends javax.swing.JFrame {
     private void buttonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBActionPerformed
         try{
             String temp = input_field.getText();
-            b = Long.parseLong(temp);
+            b = Double.parseDouble(temp);
             blabel.setText("B = " + String.valueOf(b));
             input_field.setText("");
         }catch(Exception e){
@@ -1630,7 +1680,7 @@ public class calc extends javax.swing.JFrame {
     private void buttonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCActionPerformed
         try{
             String temp = input_field.getText();
-            c = Long.parseLong(temp);
+            c = Double.parseDouble(temp);
             clabel.setText("C = " + String.valueOf(c));
             input_field.setText("");
         }catch(Exception e){
@@ -1652,7 +1702,7 @@ public class calc extends javax.swing.JFrame {
     private void buttonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDActionPerformed
         try{
             String temp = input_field.getText();
-            d = Long.parseLong(temp);
+            d = Double.parseDouble(temp);
             dlabel.setText("D = " + String.valueOf(d));
             input_field.setText("");
         }catch(Exception e){
@@ -1662,14 +1712,16 @@ public class calc extends javax.swing.JFrame {
 
     private void ProductNotationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNotationActionPerformed
         try {
-            while (a <= b)
-            {
-                ProducNotAns *= a;
-                a++;
+            double total = 1;
+            String temp = input_field.getText();
+            for(double i = a; i <=b; i++){
+                String fixed = temp.replace("X", String.valueOf(i));
+                double ans = 0;
+                fixed = properFormatting(fixed, ans);
+                ans = parenthesisFinder(findNumbers(fixed), findOperands(fixed));
+                total *= ans;
             }
-            input_field.setText(Long.toString(ProducNotAns));
-            a = 0;
-            b = 0;
+            input_field.setText(String.valueOf(total));
         } catch (Exception e1) {
             input_field.setText(null);
         }    
@@ -1679,7 +1731,7 @@ public class calc extends javax.swing.JFrame {
 
         try{
             String temp = input_field.getText();
-            a = Long.parseLong(temp);
+            a = Double.parseDouble(temp);
             alabel.setText("A = " + String.valueOf(a));
             input_field.setText("");
         }catch(Exception e){
@@ -1707,14 +1759,16 @@ public class calc extends javax.swing.JFrame {
 
     private void sumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumActionPerformed
         try {
-            while (a <= b)
-            {
-                answer = answer + a;
-                a++;
+            double total = 0;
+            String temp = input_field.getText();
+            for(double i = a; i <=b; i++){
+                String fixed = temp.replace("X", String.valueOf(i));
+                double ans = 0;
+                fixed = properFormatting(fixed, ans);
+                ans = parenthesisFinder(findNumbers(fixed), findOperands(fixed));
+                total += ans;
             }
-            input_field.setText(Double.toString(answer));
-            a = 0;
-            b = 0;
+            input_field.setText(String.valueOf(total));
         } catch (Exception e1) {
             input_field.setText(null);
         }        // TODO add your handling code here:
@@ -1722,13 +1776,19 @@ public class calc extends javax.swing.JFrame {
 
     private void DoubleProductNotationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleProductNotationActionPerformed
         try {
-            double x = Double.parseDouble(input_field.getText());
-            for (long i = a; i <= b; i++) {
-                for (long j = c; j <= d; j++){
-                    ProducNotAns *= (x * i * j);
+            double total = 1;
+            String temp = input_field.getText();
+            for(double i = a; i<=b; i++){
+                String fixedX = temp.replace("X", String.valueOf(i));
+                for(double j = c; j<=d;j++){
+                    String fixedY = fixedX.replace("Y", String.valueOf(j));
+                    double answer = 0;
+                    fixedY = properFormatting(fixedY, answer);
+                    answer = parenthesisFinder(findNumbers(fixedY), findOperands(fixedY));
+                    total *= answer;
                 }
             }
-            input_field.setText(Long.toString(ProducNotAns));
+            input_field.setText(String.valueOf(total));
         } catch (Exception e1) {
             input_field.setText("Error");
 
@@ -1752,11 +1812,7 @@ public class calc extends javax.swing.JFrame {
     }//GEN-LAST:event_combinationActionPerformed
 
     private void exponentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentActionPerformed
-        String temp = input_field.getText();
-        if(!temp.contains("^")){
-            add_char('^');
-        }
-        Operation = "x^y";
+        add_char('^');
     }//GEN-LAST:event_exponentActionPerformed
 
     private void ceilingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilingActionPerformed
@@ -1765,13 +1821,19 @@ public class calc extends javax.swing.JFrame {
 
     private void doubleSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleSumActionPerformed
         try {
-            double x = Double.parseDouble(input_field.getText());
-            for (long i = a; i <= b; i++) {
-                for (long j = c; j <= d; j++){
-                    answer = answer + (x * i * j);
+            double total = 0;
+            String temp = input_field.getText();
+            for(double i = a; i<=b; i++){
+                String fixedX = temp.replace("X", String.valueOf(i));
+                for(double j = c; j<=d;j++){
+                    String fixedY = fixedX.replace("Y", String.valueOf(j));
+                    double answer = 0;
+                    fixedY = properFormatting(fixedY, answer);
+                    answer = parenthesisFinder(findNumbers(fixedY), findOperands(fixedY));
+                    total += answer;
                 }
             }
-            input_field.setText(Double.toString(answer));
+            input_field.setText(String.valueOf(total));
         } catch (Exception e1) {
             input_field.setText("Error");
 
@@ -1872,6 +1934,7 @@ public class calc extends javax.swing.JFrame {
 
             input_field.setText(Double.toString(cbrt));
         }
+        
          while(true){
             String string = input_field.getText();
             string = properFormatting(string, answer);
@@ -1914,10 +1977,7 @@ public class calc extends javax.swing.JFrame {
 
     private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
         // TODO add your handling code here:
-        String temp = input_field.getText();
-        if(!temp.contains(".")){
-            add_char('.');
-        }
+        add_char('.');
     }//GEN-LAST:event_dotActionPerformed
 
     private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
@@ -2130,6 +2190,25 @@ public class calc extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_OpenParenthesis1ActionPerformed
 
+    private void YActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YActionPerformed
+        add_char('Y');
+    }//GEN-LAST:event_YActionPerformed
+
+    private void XActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XActionPerformed
+        add_char('X');
+    }//GEN-LAST:event_XActionPerformed
+
+    private void roundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundActionPerformed
+        try {
+            double round=Double.parseDouble(input_field.getText());
+            int round1=Integer.parseInt(String.valueOf(Math.round(round)));
+            input_field.setText(String.valueOf(round1));
+        }
+	catch(Exception e1){
+            input_field.setText(null);
+	}
+    }//GEN-LAST:event_roundActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2174,6 +2253,8 @@ public class calc extends javax.swing.JFrame {
     private javax.swing.JButton OpenParenthesis1;
     private javax.swing.JButton ProductNotation;
     private javax.swing.JButton ProductNotation1;
+    private javax.swing.JButton X;
+    private javax.swing.JButton Y;
     private javax.swing.JButton add;
     private javax.swing.JButton add1;
     private javax.swing.JLabel alabel;
@@ -2248,6 +2329,7 @@ public class calc extends javax.swing.JFrame {
     private javax.swing.JButton num_9;
     private javax.swing.JButton permutation;
     private javax.swing.JButton permutation1;
+    private javax.swing.JButton round;
     private javax.swing.JButton squareRoot;
     private javax.swing.JButton squareRoot1;
     private javax.swing.JButton sub;
