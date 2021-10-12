@@ -1964,6 +1964,10 @@ public class calc extends javax.swing.JFrame {
         // TODO add your handling code here:
         input_field.setText("");
         answer =0; a=0; b=0; c=0; d=0;
+        alabel.setText("A = " + d);
+        blabel.setText("B = " + d);
+        clabel.setText("C = " + d);
+        dlabel.setText("D = " + d);
     }//GEN-LAST:event_clearActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
